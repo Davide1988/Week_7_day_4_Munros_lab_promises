@@ -8,8 +8,10 @@ const MunrosView = function(space, data){
 }
 
 MunrosView.prototype.render = function () {
-
+this.space.innerHTML = " "
  this.data.forEach((object) => {
+
+
      const h1 = document.createElement('h3')
      h1.textContent = object.name
      this.space.appendChild(h1)

@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const container = document.querySelector('.munros-container')
-  const viewer = new MunrosListView(container)
+  const selection = document.querySelector('#munros-selector')
+  const viewer = new MunrosListView(container , selection)
   viewer.bindEvents();
 
 
