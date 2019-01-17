@@ -28,6 +28,24 @@ this.space.innerHTML = " "
      list.appendChild(meaning)
      list.appendChild(height)
 
+     const linkmap = document.createElement('a')
+     const lat = object.latlng_lat
+     const long = object.latlng_lng
+     linkmap.href = `https://www.google.com/maps/@${lat},${long},12z?hl=en`
+     linkmap.textContent = 'Look me up on Google Map'
+
+     this.space.appendChild(linkmap)
+
+
+     const br = document.createElement('br')
+     this.space.appendChild(br)
+
+     const linkWiki = document.createElement('a')
+     linkWiki.href = `https://en.wikipedia.org/wiki/${object.name}`
+     linkWiki.textContent = 'WikiMe'
+
+     this.space.appendChild(linkWiki)
+
  })
 };
 
